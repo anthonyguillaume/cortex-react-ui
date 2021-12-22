@@ -1,0 +1,22 @@
+$default-options: (
+    properties: true,
+    colors: true,
+);
+
+@function get-map-deep($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+@function is-map($map) {
+    @return type-of($map) == "map";
+}
+
+@function safe-map-merge($map, $map2) {
+    @if is-map($map) == true and is-map($map2) == true {
+        @return map-merge($map, $map2);
+    }
+    @return $map;
+}

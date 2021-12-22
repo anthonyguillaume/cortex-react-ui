@@ -1,0 +1,43 @@
+@import "../global.scss";
+
+@mixin spinner($props: null, $options: null) {
+    $internal-options: $default-options;
+
+    $internal-props: (
+        color: blue,
+    );
+
+    $internal-props: safe-map-merge($internal-props, $props);
+    $internal-options: safe-map-merge($internal-options, $options);
+
+    @if get-map-deep($internal-options, "properties") == true {
+        @keyframes ui-spinner-anim {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .ui-spinner {
+        @if get-map-deep($internal-options, "properties") == true {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            vertical-align: text-bottom;
+            border: 0.25em solid;
+            border-right: 0.25em solid transparent;
+            border-radius: 50%;
+            text-indent: -9999em;
+        }
+
+        @if get-map-deep($internal-options, "colors") == true {
+            border-left-color: get-map-deep($internal-props, "color");
+            border-top-color: get-map-deep($internal-props, "color");
+            border-bottom-color: get-map-deep($internal-props, "color");
+        }
+    }
+
+    .ui-spinner-indeterminate {
+        animation: ui-spinner-anim 0.75s linear infinite;
+    }
+}

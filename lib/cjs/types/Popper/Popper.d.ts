@@ -1,0 +1,31 @@
+import React from 'react';
+export declare const PopperPlacement: {
+    readonly Center: "center";
+    readonly BottomCenter: "bottom-center";
+    readonly BottomRight: "bottom-right";
+    readonly BottomLeft: "bottom-left";
+    readonly TopCenter: "top-center";
+    readonly TopRight: "top-right";
+    readonly TopLeft: "top-left";
+    readonly LeftTop: "left-top";
+    readonly LeftBottom: "left-bottom";
+    readonly LeftCenter: "left-center";
+    readonly RightTop: "right-top";
+    readonly RightBottom: "right-bottom";
+    readonly RightCenter: "right-center";
+};
+declare type Props = {
+    anchorEl?: string | HTMLElement | React.RefObject<HTMLElement>;
+    placement?: ObjectValues<typeof PopperPlacement>;
+    open?: boolean;
+    role?: string;
+    children?: React.ReactNode;
+    className?: string;
+    onMouseEnter?: React.MouseEventHandler<HTMLDivElement>;
+    onMouseLeave?: React.MouseEventHandler<HTMLDivElement>;
+    onMouseMove?: React.MouseEventHandler<HTMLDivElement>;
+    onMouseOut?: React.MouseEventHandler<HTMLDivElement>;
+    onMouseOver?: React.MouseEventHandler<HTMLDivElement>;
+};
+declare const Popper: React.ForwardRefExoticComponent<Props & React.RefAttributes<HTMLElement>>;
+export default Popper;

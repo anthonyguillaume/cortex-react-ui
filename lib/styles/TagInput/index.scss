@@ -1,0 +1,13 @@
+@import "../global.scss";
+
+@mixin taginput($props: null, $options: null) {
+    $internal-options: $default-options;
+
+    $internal-props: ();
+
+    $internal-props: safe-map-merge($internal-props, $props);
+    $internal-options: safe-map-merge($internal-options, $options);
+
+    .ui-taginput {
+    }
+}

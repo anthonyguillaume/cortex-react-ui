@@ -1,0 +1,24 @@
+@import "../global.scss";
+
+@mixin popper($props: null, $options: null) {
+    $internal-options: $default-options;
+
+    $internal-props: (
+        bgColor: #212121,
+        fgColor: #fff,
+    );
+
+    $internal-props: safe-map-merge($internal-props, $props);
+    $internal-options: safe-map-merge($internal-options, $options);
+
+    // .ui-popper {
+    //     @if get-map-deep($internal-options, "properties") == true {
+    //         padding: 8px;
+    //         border-radius: 4px;
+    //     }
+    //     @if get-map-deep($internal-options, "colors") == true {
+    //         background-color: get-map-deep($internal-props, "bgColor");
+    //         color: get-map-deep($internal-props, "fgColor");
+    //     }
+    // }
+}

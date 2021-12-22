@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "declaration": true,
+        "declarationDir": "types",
+        "sourceMap": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "alwaysStrict": true,
+        "noUnusedParameters": false,
+        "noImplicitReturns": true,
+        "jsx": "react-jsx",
+        "typeRoots": [
+            "./src/typings"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "lib",
+        "**/*.spec.ts",
+        "**/serviceWorker.js",
+        "src/**/*.stories.tsx",
+        "src/**/*.test.tsx"
+    ],
+    "include": [
+        "src/**/*",
+        "src/typings/**/*"
+    ]
+}
